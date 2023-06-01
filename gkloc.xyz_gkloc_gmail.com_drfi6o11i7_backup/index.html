@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="npm/bootstrap-4.3.1/dist/css/bootstrap.min.css" />
+    <script src="npm/popper_js-1.14.7/dist/umd/popper.min.js"></script>
+    <script src="npm/bootstrap-4.3.1/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/intlTelInput.min.css" />
+    <title>Возможность заработка от ...</title>
+    <link rel="canonical" href="https://gkloc.xyz" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.unitedmarkets.cc/build/bundle.css?v=1637321581" />
+  </head>
+  <body>
+    <img class="mobile" src="img/bg_mob1.png" alt="" srcset="" />
+    <div class="form">
+      <form class="main_form" id="leadform1" style="padding: 10px 40px">
+        <div class="input_wrapper">
+          <p class="main_text_form">
+            <span class="help_text">Поздравляем!</span> <br />У вас появилась
+            ограниченная возможность, начать получать от 150 000₽ в месяц на
+            достоянии нашей страны!
+          </p>
+          <div id="form-register-lead"></div>
+        </div>
+      </form>
+      <style>
+        .help_text {
+          font-size: 30px;
+          font-weight: 700;
+        }
+        .iti,
+        .form-control {
+          width: 100%;
+        }
+        .form-control {
+          height: 45px;
+          padding-left: 10px;
+          border-radius: 20px;
+        }
+        .signup {
+          width: 100%;
+          margin: 20px 0;
+          background-color: white;
+          height: 45px;
+          border-radius: 20px;
+        }
+        .form-text {
+          text-align: left;
+          margin: 5px 0;
+          color: black;
+          margin-left: 10px;
+        }
+        .form-group > button {
+          background-color: rgb(0, 174, 255);
+          color: white;
+          border: 1px solid white;
+        }
+        .main_text_form {
+          font-size: 20px;
+          text-align: center;
+          color: white;
+          padding: 10px;
+          background-color: rgb(0, 174, 255);
+          border-radius: 20px;
+          border: 2px double white;
+        }
+        body {
+          height: 100vh;
+          width: 100vw;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          background-image: url("img/bg1.png");
+        }
+        .form {
+          width: 50%;
+          padding: 40px;
+          border-radius: 20px;
+          background-color: #ffffffb0;
+        }
+        .mobile {
+          display: none;
+        }
+        @media (max-width: 850px) {
+          .mobile {
+            display: block;
+            width: 100vw;
+            height: auto;
+          }
+          body {
+            background-image: none;
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            width: auto;
+          }
+          .form {
+            width: 100%;
+            padding: 0;
+            background-color: #ffffffb0;
+          }
+        }
+        .pulse {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          margin: 20px 0;
+          height: 45px;
+          border-radius: 20px;
+          background: linear-gradient(
+            180deg,
+            rgb(87, 194, 244) 0%,
+            rgb(84, 54, 232) 100%
+          ) !important;
+          border: none;
+          outline: none;
+          border-radius: 10px;
+          color: white;
+        }
+        .pulse {
+          -webkit-animation: pulses 3s infinite ease-in-out;
+          -o-animation: pulses 3s infinite ease-in-out;
+          -ms-animation: pulses 3s infinite ease-in-out;
+          -moz-animation: pulses 3s infinite ease-in-out;
+          animation: pulses 3s infinite ease-in-out;
+        }
+        @-webkit-keyframes pulses {
+          0% {
+            -webkit-transform: scale(0.9);
+            opacity: 0.7;
+          }
+          50% {
+            -webkit-transform: scale(1);
+            opacity: 1;
+          }
+          100% {
+            -webkit-transform: scale(0.9);
+            opacity: 0.7;
+          }
+        }
+        @keyframes pulses {
+          0% {
+            transform: scale(0.9);
+            opacity: 0.7;
+          }
+          50% {
+            transform: scale(1);
+            opacity: 1;
+          }
+          100% {
+            transform: scale(0.9);
+            opacity: 0.7;
+          }
+        }
+      </style>
+    </div>
+
+    <style>
+      .error-border {
+        border: dashed 1px #ce0909;
+      }
+      p.error-msg {
+        margin: 0;
+        color: #ce0909;
+        padding: 5px 0;
+        font-size: 14px;
+        font-style: italic;
+      }
+      .modal {
+        display: none;
+        /* Hidden by default */
+        position: fixed;
+        /* Stay in place */
+        z-index: 1;
+        /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+        overflow: auto;
+        /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0);
+        /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4);
+        /* Black w/ opacity */
+        -webkit-animation-name: fadeIn;
+        /* Fade in the background */
+        -webkit-animation-duration: 0.4s;
+        animation-name: fadeIn;
+        animation-duration: 0.4s;
+      }
+      .modal-content {
+        position: fixed;
+        left: 50%;
+        top: 20%;
+        transform: translate(-50%, 0);
+        background-color: #fefefe;
+        max-width: 400px;
+        min-height: 300px;
+        -webkit-animation-name: slideIn;
+        -webkit-animation-duration: 0.4s;
+        animation-name: slideIn;
+        animation-duration: 0.4s;
+      }
+      .close {
+        color: white;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+      .close:hover,
+      .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      .modal-header {
+        padding: 2px 16px;
+        background-color: #ff1838;
+        color: white;
+      }
+      .modal-body {
+        padding: 16px;
+        text-align: center;
+      }
+      /* Add Animation */
+      @-webkit-keyframes slideIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          bottom: 0;
+          opacity: 1;
+        }
+      }
+      @keyframes slideIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          bottom: 0;
+          opacity: 1;
+        }
+      }
+      @-webkit-keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      /* preloader */
+      .preloader {
+        display: block !important;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 99;
+        width: 100%;
+        height: 100%;
+        overflow: visible;
+        background: #fbfbfb url("img/processing.gif") no-repeat center center;
+        opacity: 1;
+        transition: opacity 2s linear;
+      }
+      .preloader-visible {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity 2s linear;
+      }
+      .preloader-hidden {
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s 2s, opacity 2s linear;
+      }
+    </style>
+    <script
+      defer=""
+      src="https://cdn.unitedmarkets.cc/build/bundle.js?v=1637321581"></script>
+  </body>
+</html>

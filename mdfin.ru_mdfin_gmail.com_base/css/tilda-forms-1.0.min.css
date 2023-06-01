@@ -1,0 +1,29 @@
+#form-register-lead {
+    margin-top: 100px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 1000px) {
+    #form-register-lead {
+        margin-top: 0px;
+    }
+}
+
+
+
+.block-shadow {
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+#form-register-lead input.input_react,
+.react-tel-input input,
+.react-tel-input .form-control input {
+    border-radius: 15px !important;
+}
+
+.button_react {
+    cursor: pointer;
+    padding: 17px 1px !important;
+    background-color: #00446bc4;
+    border-radius: 15px;
+}
